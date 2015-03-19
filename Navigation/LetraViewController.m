@@ -14,34 +14,33 @@
     [super viewDidLoad];
     _sing = [Singleton instance];
     self.title = [NSString stringWithFormat:@"%c", [[_sing.palavras objectAtIndex:_sing.letra] characterAtIndex:0]];
-    UIBarButtonItem *next = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFastForward target:self action:@selector(next:)];
+    UIBarButtonItem *next = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFastForward target:self action:@selector(next)];
     self.navigationItem.rightBarButtonItem=next;
-    UIBarButtonItem *prev = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemRewind target:self action:@selector(prev:)];
+    UIBarButtonItem *prev = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemRewind target:self action:@selector(prev)];
     self.navigationItem.leftBarButtonItem=prev;
+    
     UILabel *label = [[UILabel alloc] init];
-    label.text= [NSString stringWithFormat:[_sing.palavras objectAtIndex:_sing.letra]];
     label.center = self.view.center;
-    UIView *imagem = [[UIView alloc] init];
-    imagem.frame = self.view.frame;
+    label.text= [NSString stringWithFormat:[_sing.palavras objectAtIndex:_sing.letra]];
+
+    
+    UIImageView *imagem = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 50, 50)];
+    imagem = [_sing.imagens objectAtIndex:_sing.letra];
     [self.view addSubview:imagem];
     [self.view addSubview:label];
-    
 }
-
 - (void) viewWillAppear:(BOOL) animated{
-    
+
 }
 
-- (id) next{
+- (void) next{
     _sing= [Singleton instance];
     _sing.letra ++;
-    [self dismissViewControllerAnimated:YES completion:nil];
-    return self;
 }
 
-- (id) prev{
+- (void) prev{
     _sing = [Singleton instance];
-    [self dismissViewControllerAnimated:YES completion:nil];
-    return self;
+    _sing.letra --;
 }
+
 @end
