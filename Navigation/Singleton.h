@@ -12,7 +12,7 @@
 
 @property (nonatomic) NSArray *palavras;
 @property (nonatomic) NSArray *imagens;
-@property (nonatomic) NSInteger *letra;
+@property (nonatomic) int letra;
 
 - (instancetype) init;
 + (Singleton* ) instance;

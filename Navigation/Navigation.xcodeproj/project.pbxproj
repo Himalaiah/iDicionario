@@ -19,9 +19,38 @@
 		27156F6818B76AF50053A99C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27156F5018B76AF50053A99C /* UIKit.framework */; };
 		27156F7018B76AF50053A99C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27156F6E18B76AF50053A99C /* InfoPlist.strings */; };
 		27156F7218B76AF50053A99C /* NavigationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27156F7118B76AF50053A99C /* NavigationTests.m */; };
-		F76B6C0F1AB9A715007DDDC9 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F76B6C0E1AB9A715007DDDC9 /* FirstViewController.m */; };
+		F73F98F21ABC9BC700E0D11C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73F98F11ABC9BC700E0D11C /* AVFoundation.framework */; };
+		F74922121ABCA8B800F8A543 /* A.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F74921F81ABCA85600F8A543 /* A.mp3 */; };
+		F74922131ABCA8B800F8A543 /* B.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F74921F91ABCA85600F8A543 /* B.mp3 */; };
+		F74922141ABCA8B800F8A543 /* C.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F74921FA1ABCA85600F8A543 /* C.mp3 */; };
+		F74922151ABCA8B800F8A543 /* D.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F74921FB1ABCA85600F8A543 /* D.mp3 */; };
+		F74922161ABCA8B800F8A543 /* E.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F74921FC1ABCA85600F8A543 /* E.mp3 */; };
+		F74922171ABCA8B800F8A543 /* F.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F74921FD1ABCA85600F8A543 /* F.mp3 */; };
+		F74922181ABCA8B800F8A543 /* G.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F74921FE1ABCA85600F8A543 /* G.mp3 */; };
+		F74922191ABCA8B800F8A543 /* H.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F74921FF1ABCA85600F8A543 /* H.mp3 */; };
+		F749221A1ABCA8B800F8A543 /* I.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F74922001ABCA85600F8A543 /* I.mp3 */; };
+		F749221B1ABCA8B800F8A543 /* J.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F74922011ABCA85600F8A543 /* J.mp3 */; };
+		F749221C1ABCA8B800F8A543 /* K.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F74922021ABCA85600F8A543 /* K.mp3 */; };
+		F749221D1ABCA8B800F8A543 /* L.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F74922031ABCA85600F8A543 /* L.mp3 */; };
+		F749221E1ABCA8B800F8A543 /* M.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F74922041ABCA85600F8A543 /* M.mp3 */; };
+		F749221F1ABCA8B800F8A543 /* N.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F74922051ABCA85600F8A543 /* N.mp3 */; };
+		F74922201ABCA8B800F8A543 /* O.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F74922061ABCA85600F8A543 /* O.mp3 */; };
+		F74922211ABCA8B800F8A543 /* P.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F74922071ABCA85600F8A543 /* P.mp3 */; };
+		F74922221ABCA8B800F8A543 /* Q.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F74922081ABCA85600F8A543 /* Q.mp3 */; };
+		F74922231ABCA8B800F8A543 /* R.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F74922091ABCA85600F8A543 /* R.mp3 */; };
+		F74922241ABCA8B800F8A543 /* S.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F749220A1ABCA85600F8A543 /* S.mp3 */; };
+		F74922251ABCA8B800F8A543 /* T.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F749220B1ABCA85600F8A543 /* T.mp3 */; };
+		F74922261ABCA8B800F8A543 /* U.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F749220C1ABCA85600F8A543 /* U.mp3 */; };
+		F74922271ABCA8B800F8A543 /* V.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F749220D1ABCA85600F8A543 /* V.mp3 */; };
+		F74922281ABCA8B800F8A543 /* W.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F749220E1ABCA85600F8A543 /* W.mp3 */; };
+		F74922291ABCA8B800F8A543 /* X.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F749220F1ABCA85600F8A543 /* X.mp3 */; };
+		F749222A1ABCA8B800F8A543 /* Y.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F74922101ABCA85600F8A543 /* Y.mp3 */; };
+		F749222B1ABCA8B800F8A543 /* Z.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F74922111ABCA85600F8A543 /* Z.mp3 */; };
+		F749222E1ABCABB400F8A543 /* DicionarioTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F749222D1ABCABB400F8A543 /* DicionarioTableViewController.m */; };
 		F77DA0441AB74B1C004849AB /* LetraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F77DA0431AB74B1C004849AB /* LetraViewController.m */; };
 		F77DA0471AB74F2E004849AB /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = F77DA0461AB74F2E004849AB /* Singleton.m */; };
+		F7C286C91ABB63B700079501 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C286C81ABB63B700079501 /* Realm.framework */; };
+		F7C286CB1ABB63CA00079501 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C286CA1ABB63CA00079501 /* libc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,12 +80,43 @@
 		27156F6D18B76AF50053A99C /* NavigationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NavigationTests-Info.plist"; sourceTree = "<group>"; };
 		27156F6F18B76AF50053A99C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		27156F7118B76AF50053A99C /* NavigationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationTests.m; sourceTree = "<group>"; };
-		F76B6C0D1AB9A715007DDDC9 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		F76B6C0E1AB9A715007DDDC9 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		F73F98ED1ABC98C000E0D11C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = ../../../../../../System/Library/Frameworks/AppKit.framework; sourceTree = "<group>"; };
+		F73F98EF1ABC99E200E0D11C /* AppKit */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = AppKit; path = ../../../../../../System/Library/Frameworks/AppKit.framework/Versions/C/AppKit; sourceTree = "<group>"; };
+		F73F98F11ABC9BC700E0D11C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F74921F81ABCA85600F8A543 /* A.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = A.mp3; sourceTree = "<group>"; };
+		F74921F91ABCA85600F8A543 /* B.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = B.mp3; sourceTree = "<group>"; };
+		F74921FA1ABCA85600F8A543 /* C.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = C.mp3; sourceTree = "<group>"; };
+		F74921FB1ABCA85600F8A543 /* D.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = D.mp3; sourceTree = "<group>"; };
+		F74921FC1ABCA85600F8A543 /* E.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = E.mp3; sourceTree = "<group>"; };
+		F74921FD1ABCA85600F8A543 /* F.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = F.mp3; sourceTree = "<group>"; };
+		F74921FE1ABCA85600F8A543 /* G.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = G.mp3; sourceTree = "<group>"; };
+		F74921FF1ABCA85600F8A543 /* H.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = H.mp3; sourceTree = "<group>"; };
+		F74922001ABCA85600F8A543 /* I.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = I.mp3; sourceTree = "<group>"; };
+		F74922011ABCA85600F8A543 /* J.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = J.mp3; sourceTree = "<group>"; };
+		F74922021ABCA85600F8A543 /* K.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = K.mp3; sourceTree = "<group>"; };
+		F74922031ABCA85600F8A543 /* L.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = L.mp3; sourceTree = "<group>"; };
+		F74922041ABCA85600F8A543 /* M.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = M.mp3; sourceTree = "<group>"; };
+		F74922051ABCA85600F8A543 /* N.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = N.mp3; sourceTree = "<group>"; };
+		F74922061ABCA85600F8A543 /* O.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = O.mp3; sourceTree = "<group>"; };
+		F74922071ABCA85600F8A543 /* P.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = P.mp3; sourceTree = "<group>"; };
+		F74922081ABCA85600F8A543 /* Q.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Q.mp3; sourceTree = "<group>"; };
+		F74922091ABCA85600F8A543 /* R.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = R.mp3; sourceTree = "<group>"; };
+		F749220A1ABCA85600F8A543 /* S.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = S.mp3; sourceTree = "<group>"; };
+		F749220B1ABCA85600F8A543 /* T.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = T.mp3; sourceTree = "<group>"; };
+		F749220C1ABCA85600F8A543 /* U.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = U.mp3; sourceTree = "<group>"; };
+		F749220D1ABCA85600F8A543 /* V.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = V.mp3; sourceTree = "<group>"; };
+		F749220E1ABCA85600F8A543 /* W.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = W.mp3; sourceTree = "<group>"; };
+		F749220F1ABCA85600F8A543 /* X.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = X.mp3; sourceTree = "<group>"; };
+		F74922101ABCA85600F8A543 /* Y.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Y.mp3; sourceTree = "<group>"; };
+		F74922111ABCA85600F8A543 /* Z.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Z.mp3; sourceTree = "<group>"; };
+		F749222C1ABCABB400F8A543 /* DicionarioTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DicionarioTableViewController.h; path = ../DicionarioTableViewController.h; sourceTree = "<group>"; };
+		F749222D1ABCABB400F8A543 /* DicionarioTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DicionarioTableViewController.m; path = ../DicionarioTableViewController.m; sourceTree = "<group>"; };
 		F77DA0421AB74B1C004849AB /* LetraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LetraViewController.h; sourceTree = "<group>"; };
 		F77DA0431AB74B1C004849AB /* LetraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LetraViewController.m; sourceTree = "<group>"; };
 		F77DA0451AB74F2E004849AB /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		F77DA0461AB74F2E004849AB /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
+		F7C286C81ABB63B700079501 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		F7C286CA1ABB63CA00079501 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +124,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F73F98F21ABC9BC700E0D11C /* AVFoundation.framework in Frameworks */,
+				F7C286CB1ABB63CA00079501 /* libc++.dylib in Frameworks */,
+				F7C286C91ABB63B700079501 /* Realm.framework in Frameworks */,
 				27156F4F18B76AF50053A99C /* CoreGraphics.framework in Frameworks */,
 				27156F5118B76AF50053A99C /* UIKit.framework in Frameworks */,
 				27156F4D18B76AF50053A99C /* Foundation.framework in Frameworks */,
@@ -86,8 +149,8 @@
 		27156F4018B76AF50053A99C = {
 			isa = PBXGroup;
 			children = (
-				F76B6C0D1AB9A715007DDDC9 /* FirstViewController.h */,
-				F76B6C0E1AB9A715007DDDC9 /* FirstViewController.m */,
+				F74921F71ABCA85600F8A543 /* SomPokémon */,
+				F7C286C81ABB63B700079501 /* Realm.framework */,
 				F77DA0451AB74F2E004849AB /* Singleton.h */,
 				F77DA0461AB74F2E004849AB /* Singleton.m */,
 				F77DA0421AB74B1C004849AB /* LetraViewController.h */,
@@ -111,6 +174,10 @@
 		27156F4B18B76AF50053A99C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F73F98F11ABC9BC700E0D11C /* AVFoundation.framework */,
+				F73F98EF1ABC99E200E0D11C /* AppKit */,
+				F73F98ED1ABC98C000E0D11C /* AppKit.framework */,
+				F7C286CA1ABB63CA00079501 /* libc++.dylib */,
 				27156F4C18B76AF50053A99C /* Foundation.framework */,
 				27156F4E18B76AF50053A99C /* CoreGraphics.framework */,
 				27156F5018B76AF50053A99C /* UIKit.framework */,
@@ -122,6 +189,8 @@
 		27156F5218B76AF50053A99C /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				F749222C1ABCABB400F8A543 /* DicionarioTableViewController.h */,
+				F749222D1ABCABB400F8A543 /* DicionarioTableViewController.m */,
 				27156F5B18B76AF50053A99C /* MackenzieAppDelegate.h */,
 				27156F5C18B76AF50053A99C /* MackenzieAppDelegate.m */,
 				27156F5E18B76AF50053A99C /* Images.xcassets */,
@@ -157,6 +226,39 @@
 				27156F6E18B76AF50053A99C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F74921F71ABCA85600F8A543 /* SomPokémon */ = {
+			isa = PBXGroup;
+			children = (
+				F74921F81ABCA85600F8A543 /* A.mp3 */,
+				F74921F91ABCA85600F8A543 /* B.mp3 */,
+				F74921FA1ABCA85600F8A543 /* C.mp3 */,
+				F74921FB1ABCA85600F8A543 /* D.mp3 */,
+				F74921FC1ABCA85600F8A543 /* E.mp3 */,
+				F74921FD1ABCA85600F8A543 /* F.mp3 */,
+				F74921FE1ABCA85600F8A543 /* G.mp3 */,
+				F74921FF1ABCA85600F8A543 /* H.mp3 */,
+				F74922001ABCA85600F8A543 /* I.mp3 */,
+				F74922011ABCA85600F8A543 /* J.mp3 */,
+				F74922021ABCA85600F8A543 /* K.mp3 */,
+				F74922031ABCA85600F8A543 /* L.mp3 */,
+				F74922041ABCA85600F8A543 /* M.mp3 */,
+				F74922051ABCA85600F8A543 /* N.mp3 */,
+				F74922061ABCA85600F8A543 /* O.mp3 */,
+				F74922071ABCA85600F8A543 /* P.mp3 */,
+				F74922081ABCA85600F8A543 /* Q.mp3 */,
+				F74922091ABCA85600F8A543 /* R.mp3 */,
+				F749220A1ABCA85600F8A543 /* S.mp3 */,
+				F749220B1ABCA85600F8A543 /* T.mp3 */,
+				F749220C1ABCA85600F8A543 /* U.mp3 */,
+				F749220D1ABCA85600F8A543 /* V.mp3 */,
+				F749220E1ABCA85600F8A543 /* W.mp3 */,
+				F749220F1ABCA85600F8A543 /* X.mp3 */,
+				F74922101ABCA85600F8A543 /* Y.mp3 */,
+				F74922111ABCA85600F8A543 /* Z.mp3 */,
+			);
+			path = "SomPokémon";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +337,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F74922121ABCA8B800F8A543 /* A.mp3 in Resources */,
+				F74922131ABCA8B800F8A543 /* B.mp3 in Resources */,
+				F74922141ABCA8B800F8A543 /* C.mp3 in Resources */,
+				F74922151ABCA8B800F8A543 /* D.mp3 in Resources */,
+				F74922161ABCA8B800F8A543 /* E.mp3 in Resources */,
+				F74922171ABCA8B800F8A543 /* F.mp3 in Resources */,
+				F74922181ABCA8B800F8A543 /* G.mp3 in Resources */,
+				F74922191ABCA8B800F8A543 /* H.mp3 in Resources */,
+				F749221A1ABCA8B800F8A543 /* I.mp3 in Resources */,
+				F749221B1ABCA8B800F8A543 /* J.mp3 in Resources */,
+				F749221C1ABCA8B800F8A543 /* K.mp3 in Resources */,
+				F749221D1ABCA8B800F8A543 /* L.mp3 in Resources */,
+				F749221E1ABCA8B800F8A543 /* M.mp3 in Resources */,
+				F749221F1ABCA8B800F8A543 /* N.mp3 in Resources */,
+				F74922201ABCA8B800F8A543 /* O.mp3 in Resources */,
+				F74922211ABCA8B800F8A543 /* P.mp3 in Resources */,
+				F74922221ABCA8B800F8A543 /* Q.mp3 in Resources */,
+				F74922231ABCA8B800F8A543 /* R.mp3 in Resources */,
+				F74922241ABCA8B800F8A543 /* S.mp3 in Resources */,
+				F74922251ABCA8B800F8A543 /* T.mp3 in Resources */,
+				F74922261ABCA8B800F8A543 /* U.mp3 in Resources */,
+				F74922271ABCA8B800F8A543 /* V.mp3 in Resources */,
+				F74922281ABCA8B800F8A543 /* W.mp3 in Resources */,
+				F74922291ABCA8B800F8A543 /* X.mp3 in Resources */,
+				F749222A1ABCA8B800F8A543 /* Y.mp3 in Resources */,
+				F749222B1ABCA8B800F8A543 /* Z.mp3 in Resources */,
 				27156F5718B76AF50053A99C /* InfoPlist.strings in Resources */,
 				27156F5F18B76AF50053A99C /* Images.xcassets in Resources */,
 			);
@@ -255,9 +383,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F749222E1ABCABB400F8A543 /* DicionarioTableViewController.m in Sources */,
 				27156F5D18B76AF50053A99C /* MackenzieAppDelegate.m in Sources */,
 				F77DA0471AB74F2E004849AB /* Singleton.m in Sources */,
-				F76B6C0F1AB9A715007DDDC9 /* FirstViewController.m in Sources */,
 				F77DA0441AB74B1C004849AB /* LetraViewController.m in Sources */,
 				27156F5918B76AF50053A99C /* main.m in Sources */,
 			);
@@ -376,9 +504,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Navigation/Navigation-Prefix.pch";
 				INFOPLIST_FILE = "Navigation/Navigation-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Versions/C",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -389,9 +525,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Navigation/Navigation-Prefix.pch";
 				INFOPLIST_FILE = "Navigation/Navigation-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Versions/C",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

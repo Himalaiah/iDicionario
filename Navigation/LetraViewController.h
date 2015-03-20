@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "Singleton.h"
+#import <AVFoundation/AVFoundation.h>
 
-@interface LetraViewController : UIViewController
-@property Singleton *sing;
+@interface LetraViewController : UIViewController<AVAudioPlayerDelegate>
+@property (nonatomic, strong) Singleton *sing;
+@property (nonatomic, strong) UIImageView *imagem;
+@property (nonatomic, strong) AVAudioPlayer *som;
 @end
