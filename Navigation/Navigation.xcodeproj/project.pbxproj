@@ -46,9 +46,10 @@
 		F74922291ABCA8B800F8A543 /* X.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F749220F1ABCA85600F8A543 /* X.mp3 */; };
 		F749222A1ABCA8B800F8A543 /* Y.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F74922101ABCA85600F8A543 /* Y.mp3 */; };
 		F749222B1ABCA8B800F8A543 /* Z.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F74922111ABCA85600F8A543 /* Z.mp3 */; };
-		F749222E1ABCABB400F8A543 /* DicionarioTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F749222D1ABCABB400F8A543 /* DicionarioTableViewController.m */; };
+		F773339C1ADDA15B0007E7F5 /* DicionarioTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F773339B1ADDA15B0007E7F5 /* DicionarioTableViewController.m */; };
+		F773339F1ADDA2520007E7F5 /* DicionarioSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = F773339E1ADDA2520007E7F5 /* DicionarioSingleton.m */; };
 		F77DA0441AB74B1C004849AB /* LetraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F77DA0431AB74B1C004849AB /* LetraViewController.m */; };
-		F77DA0471AB74F2E004849AB /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = F77DA0461AB74F2E004849AB /* Singleton.m */; };
+		F795961F1ADEF4A900AA8D05 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F795961E1ADEF4A900AA8D05 /* EditViewController.m */; };
 		F7C286C91ABB63B700079501 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C286C81ABB63B700079501 /* Realm.framework */; };
 		F7C286CB1ABB63CA00079501 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C286CA1ABB63CA00079501 /* libc++.dylib */; };
 /* End PBXBuildFile section */
@@ -109,12 +110,14 @@
 		F749220F1ABCA85600F8A543 /* X.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = X.mp3; sourceTree = "<group>"; };
 		F74922101ABCA85600F8A543 /* Y.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Y.mp3; sourceTree = "<group>"; };
 		F74922111ABCA85600F8A543 /* Z.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Z.mp3; sourceTree = "<group>"; };
-		F749222C1ABCABB400F8A543 /* DicionarioTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DicionarioTableViewController.h; path = ../DicionarioTableViewController.h; sourceTree = "<group>"; };
-		F749222D1ABCABB400F8A543 /* DicionarioTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DicionarioTableViewController.m; path = ../DicionarioTableViewController.m; sourceTree = "<group>"; };
-		F77DA0421AB74B1C004849AB /* LetraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LetraViewController.h; sourceTree = "<group>"; };
-		F77DA0431AB74B1C004849AB /* LetraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LetraViewController.m; sourceTree = "<group>"; };
-		F77DA0451AB74F2E004849AB /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
-		F77DA0461AB74F2E004849AB /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
+		F773339A1ADDA15B0007E7F5 /* DicionarioTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DicionarioTableViewController.h; path = ../DicionarioTableViewController.h; sourceTree = "<group>"; };
+		F773339B1ADDA15B0007E7F5 /* DicionarioTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DicionarioTableViewController.m; path = ../DicionarioTableViewController.m; sourceTree = "<group>"; };
+		F773339D1ADDA2520007E7F5 /* DicionarioSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DicionarioSingleton.h; path = ../DicionarioSingleton.h; sourceTree = "<group>"; };
+		F773339E1ADDA2520007E7F5 /* DicionarioSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DicionarioSingleton.m; path = ../DicionarioSingleton.m; sourceTree = "<group>"; };
+		F77DA0421AB74B1C004849AB /* LetraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LetraViewController.h; path = ../LetraViewController.h; sourceTree = "<group>"; };
+		F77DA0431AB74B1C004849AB /* LetraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LetraViewController.m; path = ../LetraViewController.m; sourceTree = "<group>"; };
+		F795961D1ADEF4A900AA8D05 /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditViewController.h; path = ../EditViewController.h; sourceTree = "<group>"; };
+		F795961E1ADEF4A900AA8D05 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditViewController.m; path = ../EditViewController.m; sourceTree = "<group>"; };
 		F7C286C81ABB63B700079501 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		F7C286CA1ABB63CA00079501 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -151,10 +154,6 @@
 			children = (
 				F74921F71ABCA85600F8A543 /* SomPokémon */,
 				F7C286C81ABB63B700079501 /* Realm.framework */,
-				F77DA0451AB74F2E004849AB /* Singleton.h */,
-				F77DA0461AB74F2E004849AB /* Singleton.m */,
-				F77DA0421AB74B1C004849AB /* LetraViewController.h */,
-				F77DA0431AB74B1C004849AB /* LetraViewController.m */,
 				27156F5218B76AF50053A99C /* Navigation */,
 				27156F6B18B76AF50053A99C /* NavigationTests */,
 				27156F4B18B76AF50053A99C /* Frameworks */,
@@ -189,8 +188,14 @@
 		27156F5218B76AF50053A99C /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				F749222C1ABCABB400F8A543 /* DicionarioTableViewController.h */,
-				F749222D1ABCABB400F8A543 /* DicionarioTableViewController.m */,
+				F795961D1ADEF4A900AA8D05 /* EditViewController.h */,
+				F795961E1ADEF4A900AA8D05 /* EditViewController.m */,
+				F773339D1ADDA2520007E7F5 /* DicionarioSingleton.h */,
+				F773339E1ADDA2520007E7F5 /* DicionarioSingleton.m */,
+				F773339A1ADDA15B0007E7F5 /* DicionarioTableViewController.h */,
+				F773339B1ADDA15B0007E7F5 /* DicionarioTableViewController.m */,
+				F77DA0421AB74B1C004849AB /* LetraViewController.h */,
+				F77DA0431AB74B1C004849AB /* LetraViewController.m */,
 				27156F5B18B76AF50053A99C /* MackenzieAppDelegate.h */,
 				27156F5C18B76AF50053A99C /* MackenzieAppDelegate.m */,
 				27156F5E18B76AF50053A99C /* Images.xcassets */,
@@ -383,11 +388,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F749222E1ABCABB400F8A543 /* DicionarioTableViewController.m in Sources */,
+				F773339C1ADDA15B0007E7F5 /* DicionarioTableViewController.m in Sources */,
 				27156F5D18B76AF50053A99C /* MackenzieAppDelegate.m in Sources */,
-				F77DA0471AB74F2E004849AB /* Singleton.m in Sources */,
 				F77DA0441AB74B1C004849AB /* LetraViewController.m in Sources */,
 				27156F5918B76AF50053A99C /* main.m in Sources */,
+				F795961F1ADEF4A900AA8D05 /* EditViewController.m in Sources */,
+				F773339F1ADDA2520007E7F5 /* DicionarioSingleton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

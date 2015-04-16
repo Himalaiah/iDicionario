@@ -7,11 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Singleton.h"
+#import "DicionarioSingleton.h"
 #import <AVFoundation/AVFoundation.h>
+#import "EditViewController.h"
 
 @interface LetraViewController : UIViewController<AVAudioPlayerDelegate>
-@property (nonatomic, strong) Singleton *sing;
+@property (nonatomic, strong) DicionarioSingleton *sing;
 @property (nonatomic, strong) UIImageView *imagem;
 @property (nonatomic, strong) AVAudioPlayer *som;
+@property (nonatomic, strong) UIToolbar *toolbar;
+@property (nonatomic, strong) UIScrollView *scrollView;
 @end

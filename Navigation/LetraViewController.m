@@ -16,28 +16,46 @@
 
 - (void) viewDidLoad{
     [super viewDidLoad];
-    _sing = [Singleton instance];
+    self.view.backgroundColor = [UIColor clearColor];
+    
+    CGRect viewFrame = CGRectMake(0, -40, self.view.bounds.size.width, self.view.bounds.size.height + 45);
+    
+    UIImage *background = [UIImage imageNamed:@"pokedex4.png"];
+    
+    UIImage *scaledImage = [UIImage imageWithCGImage:[background CGImage]
+                                               scale:(background.scale * 1.8)
+                                         orientation:(background.imageOrientation)];
+    
+    UIImageView *backgroundView = [[UIImageView alloc] initWithFrame:viewFrame];
+    [backgroundView setImage:scaledImage];
+    
+    [self.view addSubview:backgroundView];
+    
+
+    _sing = [DicionarioSingleton instance];
     self.title = [NSString stringWithFormat:@"%c", [[_sing.palavras objectAtIndex:_sing.letra] characterAtIndex:0]];
     UIBarButtonItem *next = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFastForward target:self action:@selector(next:)];
     self.navigationItem.rightBarButtonItem=next;
     UIBarButtonItem *prev = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemRewind target:self action:@selector(prev:)];
     self.navigationItem.leftBarButtonItem=prev;
     
-    UIBarButtonItem *edit = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(edit:)];
-    
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(80, 50, 150, 150)];
-    label.text= [NSString stringWithFormat:[_sing.palavras objectAtIndex:_sing.letra]];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(90, 50, 150, 100)];
+    label.text= [NSString stringWithFormat:@"%@", [_sing.palavras objectAtIndex:_sing.letra]];
     label.textAlignment = NSTextAlignmentCenter;
     
-    imagem = [[UIImageView alloc] initWithFrame:CGRectMake(90, 250, 150, 150)];
+    imagem = [[UIImageView alloc] initWithFrame:CGRectMake(90, 200, 150, 150)];
     imagem.image = [UIImage imageNamed:[_sing.imagens objectAtIndex:_sing.letra]];
     imagem.userInteractionEnabled = YES;
+    
     
     [self.view addSubview:imagem];
     [self.view addSubview:label];
     
     UILongPressGestureRecognizer *apertoLongo = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(apertoLongo:)];
     [imagem addGestureRecognizer:apertoLongo];
+    
+    UIPanGestureRecognizer *arrastar = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(arrastar:)];
+    [imagem addGestureRecognizer:arrastar];
     
     UIPinchGestureRecognizer *pinch = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinch:)];
     [imagem addGestureRecognizer:pinch];
@@ -50,25 +68,39 @@
     _som.volume = 1.0;
     _som.delegate = self;
     
+    _toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 143, 320, 44)];
+    UIBarButtonItem *botaoEdit = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editar:)];
+    _toolbar.items = [NSArray arrayWithObjects:botaoEdit,nil];
+    
+    _toolbar.backgroundColor = [UIColor clearColor];
+    _toolbar.barTintColor = [UIColor clearColor];
+    [_toolbar setBackgroundImage:[UIImage new]
+                  forToolbarPosition:UIBarPositionAny
+                          barMetrics:UIBarMetricsDefault];
+    [_toolbar setShadowImage:[UIImage new]
+              forToolbarPosition:UIToolbarPositionAny];
+    
+    [self.view addSubview:_toolbar];
+    
 }
 
 
 - (void) next: (id) sender{
-    _sing= [Singleton instance];
+    _sing= [DicionarioSingleton instance];
     if (_sing.letra == 25) {
         _sing.letra = 0;
     }
     else{
     _sing.letra ++;
     }
-    LetraViewController *lc = [[LetraViewController alloc] init];
-    [self.navigationController pushViewController:lc animated:NO];
+    LetraViewController *lvc = [[LetraViewController alloc] init];
+    [self.navigationController pushViewController:lvc animated:NO];
     
 }
 
 - (void) prev: (id) sender{
     
-    _sing = [Singleton instance];
+    _sing = [DicionarioSingleton instance];
     if(_sing.letra == 0){
         _sing.letra = 25;
     }
@@ -78,18 +110,14 @@
     [self.navigationController popViewControllerAnimated:NO];
 }
 
-- (void) edit: (id) sender{
-    
-}
+- (void) pinch: (UIPinchGestureRecognizer *) recognizer{
 
-- (void) pinch: (UIPinchGestureRecognizer *) sender{
-    
 }
 
 - (void) apertoLongo: (UILongPressGestureRecognizer *) sender{
     if (sender.state == UIGestureRecognizerStateBegan) {
         [UIView animateWithDuration:0.5 animations:^{
-            imagem.transform = CGAffineTransformMakeScale(2.0f, 2.0f);
+            imagem.transform = CGAffineTransformMakeScale(1.5f, 1.5f);
     }];
         [self.som play];
     }
@@ -100,6 +128,25 @@
     }
     
 }
+
+- (void) arrastar: (UIPanGestureRecognizer *) sender{
+    if(sender.state == UIGestureRecognizerStateBegan){
+        [UIView animateWithDuration:0.5 animations:^{
+            
+        }];
+    if(sender.state == UIGestureRecognizerStateChanged){
+        [UIView animateWithDuration:0.5 animations:^{
+            
+        }];
+        }
+    }
+ }
+                      
+- (void) editar: (id) sender{
+    EditViewController *edv = [[EditViewController alloc] init];
+    [self presentViewController:edv animated:YES completion:nil];
+}
+
 
 
 @end

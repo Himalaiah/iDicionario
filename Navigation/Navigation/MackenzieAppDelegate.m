@@ -8,24 +8,46 @@
 
 #import "MackenzieAppDelegate.h"
 #import "LetraViewController.h"
+#import "DicionarioTableViewController.h"
 
 @implementation MackenzieAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    LetraViewController *viewController = [[LetraViewController alloc]
+    LetraViewController *vc1 = [[LetraViewController alloc]
                                            init];
+    DicionarioTableViewController *vc2 = [[DicionarioTableViewController alloc] init];
     
+    _navigationController = [[UINavigationController alloc]initWithRootViewController:vc1];
     
-    self.navigationController = [[UINavigationController alloc]initWithRootViewController:viewController];
-    self.window = [[UIWindow alloc]
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil]];
+
+    _window = [[UIWindow alloc]
                    initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = self.navigationController;
-
-
+    self.window.tintColor = [UIColor whiteColor];
     
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    _tabBarController = [[UITabBarController alloc] init];
+    
+    vc1.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFeatured tag:1];
+
+    vc2.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMore tag:2];
+    
+    _tabBarController.viewControllers = [NSArray arrayWithObjects:self.navigationController, vc2, nil];
+    [_navigationController.navigationBar setBackgroundImage:[UIImage new]
+                                                  forBarMetrics:UIBarMetricsDefault];
+    _navigationController.navigationBar.shadowImage = [UIImage new];
+    _navigationController.navigationBar.translucent = YES;
+    _navigationController.view.backgroundColor = [UIColor clearColor];
+    _navigationController.navigationBar.backgroundColor = [UIColor clearColor];
+
+    [_tabBarController.tabBar setBackgroundImage:[UIImage new]];
+    _tabBarController.tabBar.shadowImage = [UIImage new];
+    _tabBarController.tabBar.translucent = YES;
+    _tabBarController.view.backgroundColor = [UIColor clearColor];
+    _tabBarController.tabBar.backgroundColor = [UIColor clearColor];
+    
+    _window.rootViewController = _tabBarController;
+    [_window makeKeyAndVisible];
     
     return YES;
 }

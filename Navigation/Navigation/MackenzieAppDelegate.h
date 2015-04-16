@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, strong) UINavigationController *navigationController;
-
+@property (strong, nonatomic) UITabBarController *tabBarController;
+@property (strong, nonatomic) UIToolbar *toolbar;
 
 @end

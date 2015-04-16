@@ -1,16 +1,16 @@
 //
-//  Singleton.m
+//  DicionarioSingleton.m
 //  Navigation
 //
-//  Created by André Helaehil on 16/03/15.
+//  Created by André Helaehil on 14/04/15.
 //  Copyright (c) 2015 Vinicius Miana. All rights reserved.
 //
 
-#import "Singleton.h"
+#import "DicionarioSingleton.h"
 
-@implementation Singleton
+@implementation DicionarioSingleton
 
-static Singleton *instancia;
+static DicionarioSingleton *instancia;
 
 - (instancetype) init{
     self = [super init];
@@ -22,9 +22,9 @@ static Singleton *instancia;
     return self;
 }
 
-+ (Singleton *) instance{
++ (DicionarioSingleton *) instance{
     if(instancia==nil){
-        instancia = [[Singleton alloc] init];
+        instancia = [[DicionarioSingleton alloc] init];
     }
     return instancia;
 }
