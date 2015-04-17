@@ -45,7 +45,12 @@
     _tabBarController.tabBar.translucent = YES;
     _tabBarController.view.backgroundColor = [UIColor clearColor];
     _tabBarController.tabBar.backgroundColor = [UIColor clearColor];
-    
+    _tabBarController.tabBar.tintColor = [UIColor whiteColor];
+    _tabBarController.tabBar.selectedImageTintColor = [UIColor whiteColor];
+    [[UITabBar appearance] setSelectedImageTintColor:[UIColor whiteColor]];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor whiteColor] }
+                                             forState:UIControlStateSelected];
+    NSLog(@"%f", _tabBarController.tabBar.frame.size.height);
     _window.rootViewController = _tabBarController;
     [_window makeKeyAndVisible];
     

@@ -12,6 +12,5 @@
 @interface DicionarioTableViewController : UITableViewController
 
 @property (nonatomic, strong) DicionarioSingleton *sing;
-@property (nonatomic, strong) UITableView *tableview;
 @property (nonatomic, strong) UITableViewCell *cell;
 @end

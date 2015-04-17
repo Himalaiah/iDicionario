@@ -18,13 +18,20 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor clearColor];
     _sing = [DicionarioSingleton instance];
-    _tableview.delegate = self;
-    _tableview.dataSource = self;
-    _tableview.allowsSelection = NO;
-    _tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 124, self.view.frame.size.width, self.view.frame.size.height-64) style:UITableViewStylePlain];
-    self.tabBarController.tabBar.tintColor = [UIColor blueColor];
-
-}
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.allowsSelection = NO;
+    self.tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, 320, self.view.frame.size.height - self.tabBarController.tabBar.frame.size.height - 20) style:UITableViewStylePlain];
+    self.view.backgroundColor = [UIColor redColor];
+    self.tableView.bounds = CGRectMake(0, 20, 320, self.view.frame.size.height - self.tabBarController.tabBar.frame.size.height - 20);
+    
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
+    self.tableView.tableHeaderView = headerView;
+    
+    UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, self.tabBarController.tabBar.frame.origin.y, 320, self.tabBarController.tabBar.frame.size.height)];
+    self.tableView.tableFooterView = footerView;
+    }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -46,11 +53,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *identifier = @"celula";
-    [self.tableView setSeparatorColor:[UIColor redColor]];
-    [self.tableView setSeparatorInset:UIEdgeInsetsZero];
-    [_cell setPreservesSuperviewLayoutMargins:NO];
-    [_cell setLayoutMargins:UIEdgeInsetsZero];
-    
     _cell = [[UITableViewCell alloc]
             initWithStyle:UITableViewCellStyleDefault
             reuseIdentifier:identifier];
@@ -59,6 +61,10 @@
     _cell.selectionStyle = UITableViewCellSelectionStyleNone;
     _cell.textLabel.text = _sing.palavras[indexPath.row];
     _cell.textLabel.textColor = [UIColor whiteColor];
+    [self.tableView setSeparatorColor:[UIColor redColor]];
+    [self.tableView setSeparatorInset:UIEdgeInsetsZero];
+    [_cell setPreservesSuperviewLayoutMargins:NO];
+    [_cell setLayoutMargins:UIEdgeInsetsZero];
     return _cell;
 
 }

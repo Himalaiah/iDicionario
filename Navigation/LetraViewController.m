@@ -95,6 +95,7 @@
     }
     LetraViewController *lvc = [[LetraViewController alloc] init];
     [self.navigationController pushViewController:lvc animated:NO];
+    [self.navigationController dismissViewControllerAnimated:NO completion:nil ];
     
 }
 
@@ -107,21 +108,23 @@
     else{
     _sing.letra --;
     }
-    [self.navigationController popViewControllerAnimated:NO];
+    LetraViewController *lvc = [[LetraViewController alloc] init];
+    [self.navigationController pushViewController:lvc animated:NO];
+    [self.navigationController dismissViewControllerAnimated:NO completion:nil];
 }
 
 - (void) pinch: (UIPinchGestureRecognizer *) recognizer{
 
 }
 
-- (void) apertoLongo: (UILongPressGestureRecognizer *) sender{
-    if (sender.state == UIGestureRecognizerStateBegan) {
+- (void) apertoLongo: (UILongPressGestureRecognizer *) recognizer{
+    if (recognizer.state == UIGestureRecognizerStateBegan) {
         [UIView animateWithDuration:0.5 animations:^{
             imagem.transform = CGAffineTransformMakeScale(1.5f, 1.5f);
     }];
         [self.som play];
     }
-    if (sender.state == UIGestureRecognizerStateEnded) {
+    if (recognizer.state == UIGestureRecognizerStateEnded) {
         [UIView animateWithDuration:0.5 animations:^{
             imagem.transform = CGAffineTransformMakeScale(1.0f, 1.0f);
     }];
@@ -129,21 +132,16 @@
     
 }
 
-- (void) arrastar: (UIPanGestureRecognizer *) sender{
-    if(sender.state == UIGestureRecognizerStateBegan){
-        [UIView animateWithDuration:0.5 animations:^{
-            
-        }];
-    if(sender.state == UIGestureRecognizerStateChanged){
-        [UIView animateWithDuration:0.5 animations:^{
-            
-        }];
-        }
-    }
+- (void) arrastar: (UIPanGestureRecognizer *) recognizer{
+    CGPoint translation = [recognizer translationInView:self.view];
+    recognizer.view.center = CGPointMake(recognizer.view.center.x + translation.x,
+                                         recognizer.view.center.y + translation.y);
+    [recognizer setTranslation:CGPointMake(0, 0) inView:self.view];
  }
                       
 - (void) editar: (id) sender{
     EditViewController *edv = [[EditViewController alloc] init];
+    edv.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentViewController:edv animated:YES completion:nil];
 }
 
