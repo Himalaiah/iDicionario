@@ -11,9 +11,12 @@
 @interface DicionarioSingleton : NSObject
 
 
-@property (nonatomic) NSArray *palavras;
-@property (nonatomic) NSArray *imagens;
+@property (nonatomic) NSMutableArray *palavras;
+@property (nonatomic) NSMutableArray *imagens;
 @property (nonatomic) int letra;
+@property (nonatomic) NSMutableArray *datas;
+@property (nonatomic) NSArray *imagensOrigem;
+@property (nonatomic) UIImage *imagem;
 
 - (instancetype) init;
 + (DicionarioSingleton* ) instance;

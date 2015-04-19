@@ -10,7 +10,12 @@
 #import "LetraViewController.h"
 #import "DicionarioSingleton.h"
 
-@interface EditViewController : UIViewController
+@interface EditViewController : UIViewController<UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (strong, nonatomic) DicionarioSingleton *sing;
-@property (weak, nonatomic) UILabel *label;
+@property (strong, nonatomic) UIDatePicker *datePicker;
+@property (strong, nonatomic) UILabel *labelDate;
+@property (strong, nonatomic) UIToolbar *toolbar;
+@property (strong, nonatomic) UIImageView *img;
+@property (strong, nonatomic) UITextField *textField;
+@property (strong, nonatomic) UIImagePickerController *imagePicker;
 @end

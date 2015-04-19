@@ -17,4 +17,7 @@
 @property (nonatomic, strong) AVAudioPlayer *som;
 @property (nonatomic, strong) UIToolbar *toolbar;
 @property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong) UILabel *data;
+@property (nonatomic, strong) UILabel *palavra;
+@property (nonatomic) int controle;
 @end

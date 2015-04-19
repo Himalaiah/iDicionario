@@ -14,18 +14,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    LetraViewController *vc1 = [[LetraViewController alloc]
-                                           init];
+    //Instancia ambas view controllers para ser usadas na tab bar
+    LetraViewController *vc1 = [[LetraViewController alloc] init];
     DicionarioTableViewController *vc2 = [[DicionarioTableViewController alloc] init];
     
+    //Instancia a navigation controller
     _navigationController = [[UINavigationController alloc]initWithRootViewController:vc1];
     
     [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil]];
-
+    
+    //Instancia a window
     _window = [[UIWindow alloc]
                    initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.tintColor = [UIColor whiteColor];
     
+    //Instancia uma tab bar controller e adicionar 2 itens (view controllers) na tab bar
     _tabBarController = [[UITabBarController alloc] init];
     
     vc1.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFeatured tag:1];
@@ -33,6 +36,8 @@
     vc2.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMore tag:2];
     
     _tabBarController.viewControllers = [NSArray arrayWithObjects:self.navigationController, vc2, nil];
+    
+    //"Some"com a navigation bar da tela
     [_navigationController.navigationBar setBackgroundImage:[UIImage new]
                                                   forBarMetrics:UIBarMetricsDefault];
     _navigationController.navigationBar.shadowImage = [UIImage new];
@@ -40,6 +45,7 @@
     _navigationController.view.backgroundColor = [UIColor clearColor];
     _navigationController.navigationBar.backgroundColor = [UIColor clearColor];
 
+    //"Some" com a tab bar da tela
     [_tabBarController.tabBar setBackgroundImage:[UIImage new]];
     _tabBarController.tabBar.shadowImage = [UIImage new];
     _tabBarController.tabBar.translucent = YES;
@@ -50,7 +56,8 @@
     [[UITabBar appearance] setSelectedImageTintColor:[UIColor whiteColor]];
     [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor whiteColor] }
                                              forState:UIControlStateSelected];
-    NSLog(@"%f", _tabBarController.tabBar.frame.size.height);
+    
+    //Faz a tab bar controller ser a root view controller da window
     _window.rootViewController = _tabBarController;
     [_window makeKeyAndVisible];
     

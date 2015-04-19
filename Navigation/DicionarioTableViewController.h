@@ -9,8 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "DicionarioSingleton.h"
 
-@interface DicionarioTableViewController : UITableViewController
+@interface DicionarioTableViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) DicionarioSingleton *sing;
 @property (nonatomic, strong) UITableViewCell *cell;
+@property (nonatomic, strong) UIView *headerView;
+@property (nonatomic, strong) UIView *footerView;
+@property (nonatomic, strong) UITableView *tableView;
+
 @end

@@ -16,21 +16,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor clearColor];
     _sing = [DicionarioSingleton instance];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    self.tableView.allowsSelection = NO;
-    self.tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, 320, self.view.frame.size.height - self.tabBarController.tabBar.frame.size.height - 20) style:UITableViewStylePlain];
+
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, 320, self.view.frame.size.height - self.tabBarController.tabBar.frame.size.height - 20) style:UITableViewStylePlain];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    _tableView.allowsSelection = NO;
+    _tableView.backgroundColor = [UIColor redColor];
+
     self.view.backgroundColor = [UIColor redColor];
-    self.tableView.bounds = CGRectMake(0, 20, 320, self.view.frame.size.height - self.tabBarController.tabBar.frame.size.height - 20);
+    _tableView.bounds = CGRectMake(0, 0, 320, self.view.frame.size.height - self.tabBarController.tabBar.frame.size.height - 20);
+    [self.view addSubview:_tableView];
+        
     
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
-    self.tableView.tableHeaderView = headerView;
     
-    UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, self.tabBarController.tabBar.frame.origin.y, 320, self.tabBarController.tabBar.frame.size.height)];
-    self.tableView.tableFooterView = footerView;
+    _footerView = [[UIView alloc] initWithFrame:CGRectMake(0, self.tabBarController.tabBar.frame.origin.y, 320, self.tabBarController.tabBar.frame.size.height)];
+    [self.view addSubview:_footerView];
     }
 
 - (void)didReceiveMemoryWarning {
@@ -57,12 +58,17 @@
             initWithStyle:UITableViewCellStyleDefault
             reuseIdentifier:identifier];
     _cell.backgroundView = [[UIView alloc] init];
+    
     [_cell.backgroundView setBackgroundColor:[UIColor blackColor]];
     _cell.selectionStyle = UITableViewCellSelectionStyleNone;
     _cell.textLabel.text = _sing.palavras[indexPath.row];
     _cell.textLabel.textColor = [UIColor whiteColor];
-    [self.tableView setSeparatorColor:[UIColor redColor]];
-    [self.tableView setSeparatorInset:UIEdgeInsetsZero];
+    
+    
+    [_tableView setSeparatorColor:[UIColor redColor]];
+    [_tableView setSeparatorInset:UIEdgeInsetsZero];
+    
+    
     [_cell setPreservesSuperviewLayoutMargins:NO];
     [_cell setLayoutMargins:UIEdgeInsetsZero];
     return _cell;
